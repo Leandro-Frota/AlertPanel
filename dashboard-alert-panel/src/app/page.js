@@ -3,7 +3,6 @@ import BigCard from "@/components/BigCard/BigCard";
 import RoomModalContent from "@/components/RoomModalContent/RoomModalContent";
 import ScreenModal from "@/components/ScreenModal/ScreenModal";
 import SmallCard from "@/components/SmallCard/SmallCard";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
