@@ -11,8 +11,6 @@ export default function SideMenuItem({title = "Dashboard", icon, path}) {
         }
     }
 
-
-
     return <div onClick={goToPath} className="cursor-pointer min-w-full p-2 bg-green-700 max-h-10 text-white rounded text-sm flex items-center">
     {icon && <div className="mr-2">
                 <Icon size={20} />

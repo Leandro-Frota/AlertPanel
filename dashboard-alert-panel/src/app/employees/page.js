@@ -21,7 +21,8 @@ export default function Employees(){
             email: "ricardo@gmail.com",
             phone: "(11) - 999999999",
             role: "Dev",
-        }
+        },
+     
     ])
 
     function setModal(bool, employee){
