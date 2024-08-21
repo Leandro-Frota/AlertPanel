@@ -12,6 +12,8 @@ export default function RoomRegister(){
         }
     ]);
 
+    const [valueInput, setValueInput] = useState(false)
+
     function switchEditable(fieldIdx){
         const newRoomFields = roomFields.map((field,idx)=>{
             if(idx === fieldIdx){
@@ -29,11 +31,26 @@ export default function RoomRegister(){
     }
 
     function addField(){
-        if(roomFields.every(field => !field.editable)){
+        if(roomFields.every(field => !field.editable && valueInput)){
             setRoomFields ([...roomFields, {editable: false, value: ""}])
+            setValueInput(false)
         }
     }
 
+    function deleteField(fieldIdx){
+        
+            const newRoomFieldsFilter = roomFields.filter((field,id)=> (id !== fieldIdx || fieldIdx == 0))
+
+                        
+            setRoomFields(newRoomFieldsFilter)
+            setValueInput(true)
+            console.log(fieldIdx)   
+            console.log(newRoomFieldsFilter)
+            
+            
+        }
+
+        console.log(valueInput)
     
     return (
         <main className="flex min-h-screen gap-4 flex-grow flex-col items-start justify-start p-6">
@@ -50,9 +67,9 @@ export default function RoomRegister(){
              </div>
              {roomFields.map((field,fieldIdx)=>{
                 return <div className="flex gap-2" key={fieldIdx}>
-                        <input className="flex gap-2 disabled:bg-gray-300" disabled={!field.editable}/>
+                        <input onChange={() => setValueInput(true)}  className="flex gap-2 disabled:bg-gray-300" disabled={!field.editable}/>
                         <Pen onClick={()=> switchEditable(fieldIdx)} size={20} className="text-esmerald-800 cursor-pointer"/>
-                        <Trash size={20} className="text-esmerald-800 cursor-pointer"/>
+                        <Trash onClick={()=> deleteField(fieldIdx)} size={20} className="text-esmerald-800 cursor-pointer"/>
                     </div>
              })}
 
