@@ -31,10 +31,19 @@ export default function Employees(){
         
     }
 
+    function setNewEmployees(newEmployee){
+        const newRegister = [...employees,newEmployee]
+        setEmployees(newRegister)
+
+    }
+    console.log(employees)
+
+
+
     return (
         <main className="flex min-h-screen gap-4 flex-grow flex-col items-start justify-start p-6">
              {openedModal && <ScreenModal onClose = {()=> setOpenModal(false)}>
-                <EmployeeFormModalContent employee={employeeToEdit}/>
+                <EmployeeFormModalContent setNewEmployees={setNewEmployees} employee={employeeToEdit}/>
                 </ScreenModal>}
             <h1 className="text-2xl font-bold">Colaboradores </h1>
             <div onClick={()=>{setModal(true)}}  className="cursor-pointer flex p-2 border border-green-500 rounded">

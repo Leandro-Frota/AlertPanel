@@ -9,7 +9,7 @@ export default function RoomRegister(){
        
     ]);
 
-
+    console.log(roomFields)
 
     function switchEditable(fieldIdx){
         const newRoomFields = roomFields.map((field,idx)=>{
