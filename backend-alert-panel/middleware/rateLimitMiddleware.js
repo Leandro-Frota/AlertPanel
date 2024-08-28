@@ -1,4 +1,4 @@
-import {rateLinit} from 'express-rate-limit'
+import {rateLimit} from 'express-rate-limit'
 
 const rateLimitMiddleware = rateLimit({
     windowMs: 15 *60 *1000,
