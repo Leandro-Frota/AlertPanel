@@ -37,36 +37,7 @@ export default function EmployeeFormModalContent({employee,setNewEmployees}){
         setEmployeeName({...employeeRegister,Cargo: employeeRegistered})
     }
 
-    // function onSubmit(){
-    //     const myHeaders = new Headers();
-    //     myHeaders.append("Content-Type", "application/json");
-    
-    //     const raw = JSON.stringify({
-    //       "name": employeeRegister.name,
-    //       "email": employeeRegister.email,
-    //       "CPF": employeeRegister,
-    //       "Data de Nasciemento": employeeRegister.DatadeNascimento,
-    //       "CArgo": employeeRegister.cargo
-    //     });
-    
-    //     const requestOptions = {
-    //       method: "POST",
-    //       headers: myHeaders,
-    //       body: raw,
-    //       redirect: "follow"
-    //     };
-    
-    //     fetch("http://localhost:3001/", requestOptions)
-    //       .then((response) =>{
-    //         if(response.status !== 200){
-    //           throw new Error("Erro ao realizar inscrição")
-    //         }
-    //          toast.success("Inscrição realizada com sucesso")
-    //         })
-            
-    //       .then((result) => console.log(result))
-    //       .catch((error) => toast.error("Erro ao realizar inscrição"));
-    //   }
+
 
     console.log(employeeRegister)
 
