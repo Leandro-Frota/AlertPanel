@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "express-rate-limit": "^7.4.0"
+    "express-rate-limit": "^7.4.0",
+    "mongodb": "^6.8.1",
+    "nodemon": "^3.1.4"
   }
 }

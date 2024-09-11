@@ -1,0 +1,8 @@
+mongodb+srv://leandromfrota:<db_password>@alertpanelcluster.9tebk.mongodb.net/?retryWrites=true&w=majority&appName=alertPanelCluster
+
+
+ALERTPANELTEST
+
+Nt2HQtvk8ijZbHO8
+
+mongodb+srv://leandromfrota:<db_password>@roomregister.rxhmk.mongodb.net/?retryWrites=true&w=majority&appName=RoomRegister
