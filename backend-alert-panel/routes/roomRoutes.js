@@ -1,6 +1,6 @@
 import express from "express";
 import RoomController from "../controller/roomController.js";
-import EmployeeRegister from "../controller/employeeRegister.js"
+import EmployeeRegister from "../controller/employeeController.js"
 
 const router = express.Router();
 
